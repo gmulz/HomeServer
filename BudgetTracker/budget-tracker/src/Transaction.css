@@ -1,0 +1,34 @@
+.Transaction{
+	height: 40px;
+	width: 100%;
+	background-color: #F00;
+	margin-left: 10px;
+	padding-left: 3px;
+	/*padding-top: 2px;*/
+	border-bottom: 1px solid #AAA;
+	list-style-type: none;
+}
+
+.Transaction-title{
+	display: inline-block;
+	height: 100%;
+}
+
+.Transaction-cost{
+	width: 120px;
+	float: right;
+	height: 100%;
+	background-color: rgba(255,255,255, .1);
+}
+
+.Transaction-title .edit-button{
+    display: none;
+}
+
+/*.Transaction-title:hover > .edit-button{
+    display: inline-block;
+}*/
+
+.Transaction:hover .Transaction-title .edit-button{
+	display: inline-block;
+}

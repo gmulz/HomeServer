@@ -1,0 +1,100 @@
+.Category{
+    /*margin-left: 40px;*/
+    overflow: hidden;
+}
+
+.Category-header{
+    width: 700px;
+    height: 30px;
+    border: 2px solid #777;
+    border-radius: 4px;
+    overflow: hidden;
+    color: #333;
+}
+
+.Category-title{
+    background-color: #AAA;
+    float: left;
+    width: 590px;
+    height: 100%;
+    padding-top: 3px;
+}
+
+.Category-header:hover > .Category-title > .edit-button{
+    display: inline-block;
+}
+
+.Category-title .edit-button{
+    display: none;
+}
+
+.Category-title .edit-button:hover{
+    display: inline-block;
+}
+.Category-title .Category-edit-area{
+    /*display: none;*/
+}
+
+.Category-title .add-button{
+    float: right;
+    margin-left: 5px;
+    /*position: absolute;*/
+}
+
+.Category-total{
+    background-color: #DDD;
+    float: left;
+    width: 100px;
+    height: 100%;
+    display: inline-block;
+    padding-left: 10px;
+
+}
+
+.Category-title h3{
+    margin-top: 2px;
+    float: left;
+    margin-left: 5px;
+}
+
+.Category-txn-area{
+    transition: linear 1s;
+    -moz-transition: all 1s ease;
+    margin: 0;
+    padding: 0;
+}
+
+.Category-title input[type=checkbox]{
+    display:none;
+}
+
+.Category-title input[type=checkbox] + label{
+    margin-left: 30px;
+}
+.Category-title input[type=checkbox] + label:before{
+    transform-origin:25% 50%;
+    border: 8px solid transparent;
+    border-width: 8px 12px;   
+    border-left-color: #888;
+    margin-left: -20px;
+    width: 0;
+    height: 0;
+    display: inline-block;
+    text-align: center;
+    content: '';
+    color: #AAAFAB;
+    position: absolute;
+    margin-top: 1px;
+}
+
+.Category-title input[type=checkbox]:checked + label:before {
+    transform: rotate(90deg);
+}
+
+.Category-title input[type=text]{
+    margin-left: 10px;
+}
+
+.Category-input-area{
+    float:right;
+}
