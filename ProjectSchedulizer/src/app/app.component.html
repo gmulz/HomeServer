@@ -1,0 +1,15 @@
+<h1> Project Schedulizer </h1>
+
+<div class="creator-container">
+  <app-task-creator (taskCreated)="addTask($event)"></app-task-creator>
+</div>
+
+<div class="checklist-container">
+  <app-checklist [tasks]="dailyTasks" [title]="'Daily'" (taskComplete)="completeTask($event)" (taskDelete)="deleteTask($event)"></app-checklist>
+  <app-checklist [tasks]="weeklyTasks" [title]="'Weekly'" (taskComplete)="completeTask($event)" (taskDelete)="deleteTask($event)"></app-checklist>
+  <app-checklist [tasks]="dueTasks" [title]="'Deadlines'" (taskComplete)="completeTask($event)" (taskDelete)="deleteTask($event)"></app-checklist>
+  <app-checklist [tasks]="genericTasks" [title]="'Long term'" (taskComplete)="completeTask($event)" (taskDelete)="deleteTask($event)"></app-checklist>
+  <!-- <app-repeating-checklist [tasks]="repeatingTasks" [title]="'Repeating'"></app-repeating-checklist>
+
+  <app-checklist [tasks]="tasks" [title]="'Long term'"></app-checklist> -->
+</div>

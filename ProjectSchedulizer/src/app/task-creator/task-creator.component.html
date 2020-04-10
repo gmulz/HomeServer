@@ -1,0 +1,35 @@
+Task: <input type="text" [(ngModel)]="taskName">
+Priority: 
+<select [(ngModel)]="priority">
+  <option [value]="999"> None </option>
+  <option [value]="0"> Highest </option>
+  <option [value]="1"> High </option>
+  <option [value]="2"> Medium </option>
+  <option [value]="3"> Low </option>
+</select>
+
+Time Constraint: 
+<select [(ngModel)]="timeConstraint">
+  <option [value]="'none'"> None </option>
+  <option [value]="'daily'"> Daily </option>
+  <option [value]="'weekly'"> Weekly </option>
+  <option [value]="'due'"> Due On</option>
+</select>
+
+<span *ngIf="timeConstraint === 'weekly'" >
+  On Day:
+  <select [(ngModel)]="repeatWeek"><!--offset from thursday midnight. every [day] will populate a new thing -->
+    <option [value]="-3">Monday</option>
+    <option [value]="-2">Tuesday</option>
+    <option [value]="-1">Wednesday</option>
+    <option [value]="0">Thursday</option>
+    <option [value]="1">Friday</option>
+    <option [value]="2">Saturday</option>
+    <option [value]="3">Sunday</option>
+  </select>
+</span>
+<span *ngIf="timeConstraint === 'due'">
+  <input [(ngModel)]="dueDate" type="text">
+</span>
+
+<button (click)="createTask()"> Create Task </button>

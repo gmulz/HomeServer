@@ -1,0 +1,7 @@
+<div (mouseover)="hover()" (mouseleave)="noHover()">
+  <span class="delete-button" *ngIf="hovering" (click)="deleteMe($event)"> x </span>
+
+  {{task.title}}  <span class="due-date" *ngIf="task.dueDate != undefined">{{task.dueDate ? task.formatDate() : ""}}</span>
+<!-- todo add date field for repeating tasks longer than a day  -->
+  <input type="checkbox" (change)="onChecked($event)">
+</div>

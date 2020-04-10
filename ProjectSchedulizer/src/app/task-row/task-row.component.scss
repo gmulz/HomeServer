@@ -1,0 +1,22 @@
+:host {
+  /*width: 12rem;*/
+  display: block;
+  padding: .2rem .4rem;
+}
+
+input {
+  float: right;
+}
+
+.due-date {
+  font-size: 0.5rem;
+}
+
+div {
+  display: inline-block;
+  width: 100%;
+  .delete-button {
+    color: red;
+    cursor: pointer;
+  }
+}
